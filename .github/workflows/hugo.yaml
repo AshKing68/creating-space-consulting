@@ -32,10 +32,9 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          extended: true
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Setup Pages
         id: pages
@@ -52,7 +51,7 @@ jobs:
             --minify
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
 
