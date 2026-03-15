@@ -5,7 +5,8 @@ theme = "hextra"
 
 [params]
   description = "A compassionate, guided approach to releasing belongings"
-  author = "Ashley King"
+  [params.author]
+    name = "Ashley King"
 
 [[menus.main]]
   name = "Home"
