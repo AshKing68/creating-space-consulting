@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'Creating Space Consulting'
 theme = "hextra"
 
-[paams]
+[params]
   description = "A compassionate, guided approach to releasing belongings"
   author = "Ashley King"
 
@@ -24,7 +24,7 @@ theme = "hextra"
 
 [[menus.main]]
   name = "Blog"
-  url = "/blob/"
+  url = "/blog/"
   weight = 4
 
 [[menus.main]]
