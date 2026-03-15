@@ -1,0 +1,11 @@
+# Hugo build output
+public/
+
+# Claude Code
+.claude/
+
+# Playwright CLI
+.playwright-cli/
+
+# Screenshots
+*.png
